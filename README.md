@@ -33,7 +33,7 @@ docker run -it --rm -v $PWD:/work --name spec server:spec
 docker run -it --rm -v $PWD:/work --name spec server:spec spec:localhost
 
 # alias(if you use original ss command, use another name)
-alias ss="docker run -it --rm -v "$PWD":/work --name spec server:spec"
+alias ss='docker run -it --rm -v "$PWD":/work --name spec server:spec'
 ss spec
 ```
 
@@ -58,7 +58,7 @@ tree
 docker run -it --rm -v $PWD:/work --name awspec server:spec spec
 
 # alias(if you use original as command, use another name)
-alias as="docker run -it --rm -v "$PWD":/work --name awspec server:spec"
+alias as='docker run -it --rm -v "$PWD":/work --name awspec server:spec'
 as spec
 ```
 
