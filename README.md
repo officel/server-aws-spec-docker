@@ -60,5 +60,15 @@ docker run -it --rm -v $PWD:/work --name awspec server:spec spec
 # alias(if you use original as command, use another name)
 alias as='docker run -it --rm -v "$PWD":/work --name awspec server:spec'
 as spec
+
 ```
 
+## spec generate
+
+```bash
+docker run -it --rm -v $PWD:/work --entrypoint="/usr/local/bundle/bin/awspec" --name awspec server:spec generate --help
+docker run -it --rm -v $PWD:/work --entrypoint="/usr/local/bundle/bin/awspec" --name awspec server:spec generate acm --secrets-path=./spec/secrets.yml > spec/acm_spec.rb
+docker run -it --rm -v $PWD:/work --entrypoint="/usr/local/bundle/bin/awspec" --name awspec server:spec generate iam_user --secrets-path=./spec/secrets.yml > spec/iam_user_spec.rb
+docker run -it --rm -v $PWD:/work --entrypoint="/usr/local/bundle/bin/awspec" --name awspec server:spec generate iam_group --secrets-path=./spec/secrets.yml > spec/iam_group_spec.rb
+
+```
